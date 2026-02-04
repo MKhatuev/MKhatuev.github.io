@@ -3,208 +3,108 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ООО «ЛОГИКА И ТЕХНОЛОГИИ» — логистика и поставки</title>
-<meta name="description" content="ООО «ЛОГИКА И ТЕХНОЛОГИИ» — логистика, поставки, перевозки, складские решения">
+<title>LOGICA & TECHNOLOGIES — Logistics Company</title>
 
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:system-ui,Arial;
-  background:#f4f7fb;
-  color:#1a1a1a;
-}
+body{margin:0;font-family:Arial,system-ui;background:#f4f7fb;color:#1a1a1a}
+img{max-width:100%;border-radius:12px}
 header{
-  background:linear-gradient(120deg,#0b3d91,#0a63c9);
-  color:#fff;
-  padding:40px 20px;
+background:url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+color:white;
+padding:80px 20px;
+text-align:center;
 }
-header h1{margin:0;font-size:32px}
-header p{margin:10px 0 0;opacity:.9}
+header h1{font-size:36px;margin:0}
+header p{font-size:18px;margin-top:10px}
 
 nav{
-  background:#08316d;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 20px;
+background:#08316d;
+color:white;
 }
-nav a{
-  color:#fff;
-  padding:12px 16px;
-  text-decoration:none;
-  font-weight:600;
-}
-nav a:hover{background:#0a63c9}
-
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:40px 20px;
+nav a{color:white;text-decoration:none;margin:0 10px;font-weight:600}
+.lang button{
+background:#fff;
+color:#08316d;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
 }
 
-h2{color:#0b3d91}
+section{max-width:1100px;margin:auto;padding:40px 20px}
+h2{color:#08316d}
 
 .hero{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-.hero-box{
-  background:#fff;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,.05);
-}
-
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:16px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+align-items:center;
 }
 .card{
-  background:#fff;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,.05);
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,.05);
 }
 
-.advantages{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:16px;
-}
-.adv{
-  background:#fff;
-  padding:16px;
-  border-left:5px solid #0b3d91;
-  border-radius:10px;
-}
-
-.contacts{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-form input,form textarea{
-  width:100%;
-  padding:10px;
-  margin-bottom:10px;
-  border-radius:8px;
-  border:1px solid #ccc;
-}
-
-button{
-  background:#0b3d91;
-  color:#fff;
-  border:none;
-  padding:12px 20px;
-  border-radius:8px;
-  cursor:pointer;
+.services, .advantages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:16px;
 }
 
 footer{
-  background:#08316d;
-  color:#fff;
-  text-align:center;
-  padding:20px;
+background:#08316d;
+color:white;
+text-align:center;
+padding:20px;
 }
 
-/* Адаптив под телефон */
+/* Mobile */
 @media(max-width:768px){
-  .hero{grid-template-columns:1fr}
-  .contacts{grid-template-columns:1fr}
-  header h1{font-size:24px}
+.hero{grid-template-columns:1fr}
+header h1{font-size:24px}
 }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>ООО «ЛОГИКА И ТЕХНОЛОГИИ»</h1>
-  <p>Логистика · Поставки · Перевозки · Складские решения</p>
-</header>
-
 <nav>
-  <a href="#about">О компании</a>
-  <a href="#services">Услуги</a>
-  <a href="#advantages">Преимущества</a>
-  <a href="#contacts">Контакты</a>
+<div><b>LOGICA & TECHNOLOGIES</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contacts">Contacts</a>
+</div>
+<div class="lang">
+<button onclick="setLang('ru')">RU</button>
+<button onclick="setLang('en')">EN</button>
+</div>
 </nav>
 
-<section class="hero">
-  <div class="hero-box">
-    <h2>Надёжная логистика для бизнеса</h2>
-    <p>
-      Мы организуем поставки товаров, перевозки и складскую обработку,
-      обеспечивая прозрачность и контроль на каждом этапе.
-    </p>
-  </div>
-  <div class="hero-box">
-    <p><b>Телефон:</b> +7 (926) 561-72-38</p>
-    <p><b>Email:</b> oskonov@logicalogistics.com</p>
-    <p><b>Адрес:</b> Москва, ул. Твардовского, д.5</p>
-  </div>
-</section>
+<header>
+<h1 id="title">ООО «ЛОГИКА И ТЕХНОЛОГИИ»</h1>
+<p id="subtitle">Логистика и поставки по России и миру</p>
+</header>
 
-<section id="about">
-  <h2>О компании</h2>
-  <p>
-    ООО «ЛОГИКА И ТЕХНОЛОГИИ» — компания, специализирующаяся на оптовой торговле
-    и логистическом сопровождении. Мы обеспечиваем стабильные поставки,
-    гибкие условия сотрудничества и оптимизацию затрат на доставку.
-  </p>
+<section class="hero">
+<div class="card">
+<h2 id="aboutTitle">О компании</h2>
+<p id="aboutText">
+ООО «ЛОГИКА И ТЕХНОЛОГИИ» — компания, специализирующаяся на логистике,
+поставках и сопровождении грузов.
+</p>
+</div>
+<img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80">
 </section>
 
 <section id="services">
-  <h2>Наши услуги</h2>
-  <div class="services">
-    <div class="card">Оптовая торговля</div>
-    <div class="card">Организация поставок по РФ и за рубеж</div>
-    <div class="card">Контейнерные и автомобильные перевозки</div>
-    <div class="card">Складская обработка и консолидация</div>
-    <div class="card">Экспортно-импортное сопровождение</div>
-    <div class="card">Логистический консалтинг</div>
-  </div>
-</section>
-
-<section id="advantages">
-  <h2>Почему выбирают нас</h2>
-  <div class="advantages">
-    <div class="adv">Контроль на всех этапах перевозки</div>
-    <div class="adv">Надёжные перевозчики и партнёры</div>
-    <div class="adv">Гибкие тарифы под объёмы клиента</div>
-    <div class="adv">Индивидуальный подход</div>
-    <div class="adv">Опыт работы в логистике</div>
-  </div>
-</section>
-
-<section id="contacts" class="contacts">
-  <div>
-    <h2>Контакты</h2>
-    <p><b>Телефон:</b> +7 (926) 561-72-38</p>
-    <p><b>Email:</b> oskonov@logicalogistics.com</p>
-    <p><b>Адрес:</b> Москва, ул. Твардовского, д.5</p>
-  </div>
-
-  <div>
-    <h2>Оставить заявку</h2>
-    <form>
-      <input placeholder="Ваше имя">
-      <input placeholder="Телефон">
-      <textarea placeholder="Сообщение"></textarea>
-      <button>Отправить</button>
-    </form>
-  </div>
-</section>
-
-<footer>
-  © <span id="year"></span> ООО «ЛОГИКА И ТЕХНОЛОГИИ»
-</footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+<h2 id="servicesTitle">Услуги</h2>
+<div class="services">
+<div class="card" id="s1">Контейнерные перевозки</div>
+<div class="ca
