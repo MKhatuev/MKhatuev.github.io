@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ООО «ЛОГИКА И ТЕХНОЛОГИИ» — Оптовая торговля и логистика</title>
+  <meta name="description" content="ООО «ЛОГИКА И ТЕХНОЛОГИИ» — оптовая торговля, организация поставок, перевозки, складская обработка и логистический консалтинг." />
+  <style>
+    :root{
+      --bg-1:#eaf3ff;
+      --blue-1:#2b8be6;
+      --blue-2:#165ab0;
+      --deep:#0b2540;
+      --muted:#6b7b8c;
+      --card:rgba(255,255,255,0.95);
+      --accent:#0f62a8;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui, Arial;
+      color:var(--deep);
+      background: linear-gradient(180deg, var(--bg-1), #f6fbff);
+    }
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #ddd}
+    .nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:12px}
+    nav ul{display:flex;gap:15px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;font-weight:600}
+    .btn{background:#2b8be6;color:#fff;padding:8px 14px;border-radius:8px;border:none;cursor:pointer}
+    .hero{padding:60px 20px;background:#eef5ff}
+    .hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 380px;gap:20px}
+    section{max-width:1100px;margin:auto;padding:40px 20px}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}
+    .card{background:#fff;padding:15px;border-radius:10px}
+    footer{background:#f2f4f8;padding:20px}
+    form input,textarea{width:100%;padding:8px;margin-bottom:10px}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <strong>ООО «ЛОГИКА И ТЕХНОЛОГИИ»</strong>
+    <nav>
+      <ul>
+        <li><a href="#about">О компании</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#advantages">Преимущества</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+79265617238">Позвонить</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>ООО «ЛОГИКА И ТЕХНОЛОГИИ»</h1>
+      <p>Оптовая торговля и логистическое сопровождение</p>
+    </div>
+    <div>
+      <p><b>Телефон:</b> +7 (926) 561-72-38</p>
+      <p><b>Email:</b> oskonov@logicalogistics.com</p>
+      <p><b>Адрес:</b> Москва, ул. Твардовского, д.5</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>О компании</h2>
+  <p>ООО «ЛОГИКА И ТЕХНОЛОГИИ» — компания, специализирующаяся на оптовой неспециализированной торговле и комплексном снабжении. Мы обеспечиваем партнёрам стабильные поставки, гибкие условия сотрудничества и прозрачную логистику.</p>
+</section>
+
+<section id="services">
+  <h2>Услуги</h2>
+  <div class="services">
+    <div class="card">Оптовая торговля</div>
+    <div class="card">Организация поставок</div>
+    <div class="card">Контейнерные и автомобильные перевозки</div>
+    <div class="card">Складская обработка и консолидация</div>
+    <div class="card">Экспортно-импортное сопровождение</div>
+    <div class="card">Логистический консалтинг</div>
+  </div>
+</section>
+
+<section id="advantages">
+  <h2>Преимущества</h2>
+  <ul>
+    <li>Надёжные партнёры</li>
+    <li>Контроль на всех этапах</li>
+    <li>Гибкие тарифы</li>
+    <li>Индивидуальный подход</li>
+    <li>Опыт в логистике</li>
+  </ul>
+</section>
+
+<section id="contacts">
+  <h2>Контакты</h2>
+  <p>Телефон: +7 (926) 561-72-38</p>
+  <p>Email: oskonov@logicalogistics.com</p>
+  <p>Адрес: Москва, ул. Твардовского, д.5</p>
+
+  <form>
+    <input placeholder="Имя">
+    <input placeholder="Телефон">
+    <textarea placeholder="Сообщение"></textarea>
+    <button class="btn">Отправить</button>
+  </form>
+</section>
+
+<footer>
+  © <span id="year"></span> ООО «ЛОГИКА И ТЕХНОЛОГИИ»
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
