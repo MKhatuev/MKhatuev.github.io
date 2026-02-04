@@ -7,7 +7,7 @@
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial, sans-serif;background:#f2f4f8;color:#1a1a1a}
+body{margin:0;font-family:Arial,sans-serif;background:#f2f4f8;color:#1a1a1a}
 
 /* NAV */
 nav{
@@ -20,7 +20,7 @@ nav{
 }
 .logo{color:white;font-weight:800}
 nav a{color:white;text-decoration:none;margin:0 10px;font-weight:600}
-.lang button{margin-left:5px;padding:6px 10px;border:none;border-radius:6px}
+.lang button{margin-left:5px;padding:6px 10px;border:none;border-radius:6px;cursor:pointer}
 
 /* HERO */
 header{
@@ -49,8 +49,6 @@ h2{color:#0b3d91}
   box-shadow:0 4px 12px rgba(0,0,0,.08)
 }
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-
-/* IMAGES */
 .img{width:100%;border-radius:12px}
 
 /* CONTACTS */
@@ -83,16 +81,21 @@ footer{background:#0b3d91;color:white;text-align:center;padding:20px}
 
 <header>
   <h1 id="title">ООО «ЛОГИКА И ТЕХНОЛОГИИ»</h1>
-  <p id="subtitle">Логистика, перевозки и цепочки поставок</p>
+  <p id="subtitle">Логистика, перевозки и управление цепочками поставок</p>
 </header>
 
 <section id="about" class="grid2">
   <div class="card">
     <h2 id="aboutTitle">О компании</h2>
     <p id="aboutText">
-      ООО «ЛОГИКА И ТЕХНОЛОГИИ» — логистическая компания, специализирующаяся на организации перевозок,
-      складской обработке и управлении цепочками поставок. Мы обеспечиваем надежную доставку грузов
-      по России и за её пределами, оптимизируя сроки и затраты.
+      ООО «ЛОГИКА И ТЕХНОЛОГИИ» — логистическая компания, работающая в сфере
+      организации грузоперевозок, складской логистики и сопровождения поставок.
+      Мы выстраиваем эффективные маршруты доставки, контролируем грузы на всех
+      этапах и обеспечиваем прозрачность логистических процессов для наших клиентов.
+      <br><br>
+      Компания сотрудничает с проверенными перевозчиками, складскими операторами
+      и портовой инфраструктурой, что позволяет нам обеспечивать устойчивые поставки
+      как по территории Российской Федерации, так и на международных направлениях.
     </p>
   </div>
   <img class="img" src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80">
@@ -103,7 +106,7 @@ footer{background:#0b3d91;color:white;text-align:center;padding:20px}
   <div class="cards">
     <div class="card" id="s1">Контейнерные перевозки</div>
     <div class="card" id="s2">Автомобильные перевозки</div>
-    <div class="card" id="s3">Складская логистика</div>
+    <div class="card" id="s3">Складская логистика и консолидация</div>
     <div class="card" id="s4">Экспортно-импортные операции</div>
     <div class="card" id="s5">Логистический консалтинг</div>
   </div>
@@ -112,10 +115,10 @@ footer{background:#0b3d91;color:white;text-align:center;padding:20px}
 <section>
   <h2 id="advTitle">Преимущества</h2>
   <div class="cards">
-    <div class="card" id="a1">Контроль на всех этапах перевозки</div>
-    <div class="card" id="a2">Надёжные партнёры и перевозчики</div>
-    <div class="card" id="a3">Гибкие тарифы и условия</div>
-    <div class="card" id="a4">Опыт в международной логистике</div>
+    <div class="card" id="a1">Контроль груза на всех этапах маршрута</div>
+    <div class="card" id="a2">Надёжные партнёры и подрядчики</div>
+    <div class="card" id="a3">Гибкие тарифы под объёмы клиентов</div>
+    <div class="card" id="a4">Опыт международных поставок</div>
   </div>
 </section>
 
@@ -126,7 +129,7 @@ footer{background:#0b3d91;color:white;text-align:center;padding:20px}
     <p>Email: oskonov@logicalogistics.com</p>
     <p>Адрес: Москва, ул. Твардовского, д.5</p>
   </div>
-  <img class="img" src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80">
+  <img class="img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80">
 </section>
 
 <footer>
@@ -136,20 +139,20 @@ footer{background:#0b3d91;color:white;text-align:center;padding:20px}
 <script>
 const ru={
 title:"ООО «ЛОГИКА И ТЕХНОЛОГИИ»",
-subtitle:"Логистика, перевозки и цепочки поставок",
+subtitle:"Логистика, перевозки и управление цепочками поставок",
 aboutTitle:"О компании",
-aboutText:"ООО «ЛОГИКА И ТЕХНОЛОГИИ» — логистическая компания, специализирующаяся на организации перевозок, складской обработке и управлении цепочками поставок.",
+aboutText:"ООО «ЛОГИКА И ТЕХНОЛОГИИ» — логистическая компания, работающая в сфере организации грузоперевозок, складской логистики и сопровождения поставок. Мы выстраиваем эффективные маршруты доставки, контролируем грузы на всех этапах и обеспечиваем прозрачность логистических процессов для наших клиентов. Компания сотрудничает с проверенными перевозчиками, складскими операторами и портовой инфраструктурой, что позволяет нам обеспечивать устойчивые поставки как по территории Российской Федерации, так и на международных направлениях.",
 servicesTitle:"Услуги",
 s1:"Контейнерные перевозки",
 s2:"Автомобильные перевозки",
-s3:"Складская логистика",
+s3:"Складская логистика и консолидация",
 s4:"Экспортно-импортные операции",
 s5:"Логистический консалтинг",
 advTitle:"Преимущества",
-a1:"Контроль на всех этапах перевозки",
-a2:"Надёжные партнёры и перевозчики",
-a3:"Гибкие тарифы и условия",
-a4:"Опыт в международной логистике",
+a1:"Контроль груза на всех этапах маршрута",
+a2:"Надёжные партнёры и подрядчики",
+a3:"Гибкие тарифы под объёмы клиентов",
+a4:"Опыт международных поставок",
 contactsTitle:"Контакты",
 navAbout:"О компании",
 navServices:"Услуги",
@@ -158,13 +161,13 @@ navContacts:"Контакты"
 
 const en={
 title:"LOGICA & TECHNOLOGIES",
-subtitle:"Logistics and supply chain solutions",
+subtitle:"Logistics, transportation and supply chain management",
 aboutTitle:"About us",
-aboutText:"LOGICA & TECHNOLOGIES is a logistics company specializing in transportation, warehousing and supply chain management.",
+aboutText:"LOGICA & TECHNOLOGIES is a logistics company specializing in transportation, warehousing and supply chain support. We build efficient delivery routes, control cargo at every stage and provide transparent logistics processes for our clients. The company cooperates with reliable carriers, warehouse operators and port infrastructure, which allows us to ensure stable deliveries both within Russia and on international routes.",
 servicesTitle:"Services",
 s1:"Container transportation",
 s2:"Road transportation",
-s3:"Warehouse logistics",
+s3:"Warehouse logistics and consolidation",
 s4:"Export and import operations",
 s5:"Logistics consulting",
 advTitle:"Advantages",
@@ -180,8 +183,11 @@ navContacts:"Contacts"
 
 function setLang(l){
 const t=l==="ru"?ru:en;
-for(let k in t){document.getElementById(k).textContent=t[k];}
+for(let k in t){
+  document.getElementById(k).textContent=t[k];
 }
+}
+
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
