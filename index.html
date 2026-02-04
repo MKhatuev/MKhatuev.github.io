@@ -14,20 +14,6 @@ body{
   color:#1a1a1a;
 }
 
-/* HEADER */
-header{
-  background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url("https://images.unsplash.com/photo-1590490360184-9ef0e7bbd5d7?auto=format&fit=crop&w=1600&q=80");
-  background-size:cover;
-  background-position:center;
-  color:white;
-  padding:80px 20px;
-  text-align:center;
-}
-header h1{margin:0;font-size:42px}
-header p{margin-top:15px;font-size:18px}
-
 /* NAV */
 nav{
   background:#0b3d91;
@@ -51,6 +37,20 @@ nav a{
   border-radius:6px;
   cursor:pointer;
 }
+
+/* HEADER */
+header{
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:90px 20px;
+  text-align:center;
+}
+header h1{margin:0;font-size:42px}
+header p{margin-top:15px;font-size:18px}
 
 /* SECTIONS */
 section{
@@ -106,9 +106,9 @@ footer{
 <nav>
   <div class="logo">LOGICA & TECHNOLOGIES</div>
   <div>
-    <a href="#about">О компании</a>
-    <a href="#services">Услуги</a>
-    <a href="#contacts">Контакты</a>
+    <a href="#about" id="navAbout">О компании</a>
+    <a href="#services" id="navServices">Услуги</a>
+    <a href="#contacts" id="navContacts">Контакты</a>
   </div>
   <div class="lang">
     <button onclick="setLang('ru')">RU</button>
@@ -162,14 +162,8 @@ footer{
     <p>Email: oskonov@logicalogistics.com</p>
     <p>Адрес: Москва, ул. Твардовского, д.5</p>
   </div>
-  <div class="card">
-    <h2>Оставить заявку</h2>
-    <form>
-      <input placeholder="Ваше имя" style="width:100%;margin-bottom:10px;padding:10px">
-      <input placeholder="Телефон" style="width:100%;margin-bottom:10px;padding:10px">
-      <textarea placeholder="Сообщение" style="width:100%;padding:10px"></textarea>
-      <button style="margin-top:10px;padding:12px 20px;background:#0b3d91;color:white;border:none;border-radius:6px">Отправить</button>
-    </form>
+  <div>
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80" style="width:100%;border-radius:12px">
   </div>
 </section>
 
@@ -194,7 +188,10 @@ a1:"Контроль на всех этапах",
 a2:"Надёжные партнёры",
 a3:"Гибкие тарифы",
 a4:"Опыт в логистике",
-contactsTitle:"Контакты"
+contactsTitle:"Контакты",
+navAbout:"О компании",
+navServices:"Услуги",
+navContacts:"Контакты"
 };
 
 const en = {
@@ -213,15 +210,19 @@ a1:"Full control",
 a2:"Reliable partners",
 a3:"Flexible rates",
 a4:"Logistics expertise",
-contactsTitle:"Contacts"
+contactsTitle:"Contacts",
+navAbout:"About",
+navServices:"Services",
+navContacts:"Contacts"
 };
 
 function setLang(l){
 const t = l==="ru"?ru:en;
 for(let k in t){
-document.getElementById(k).textContent=t[k];
+  document.getElementById(k).textContent=t[k];
 }
 }
+
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
