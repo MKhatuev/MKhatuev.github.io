@@ -107,4 +107,85 @@ header h1{font-size:24px}
 <h2 id="servicesTitle">Услуги</h2>
 <div class="services">
 <div class="card" id="s1">Контейнерные перевозки</div>
-<div class="ca
+<div class="card" id="s2">Автомобильные перевозки</div>
+<div class="card" id="s3">Складская обработка</div>
+<div class="card" id="s4">Экспорт и импорт</div>
+<div class="card" id="s5">Логистический консалтинг</div>
+</div>
+</section>
+
+<section>
+<h2 id="advTitle">Преимущества</h2>
+<div class="advantages">
+<div class="card" id="a1">Контроль на всех этапах</div>
+<div class="card" id="a2">Надёжные партнёры</div>
+<div class="card" id="a3">Гибкие тарифы</div>
+<div class="card" id="a4">Опыт в логистике</div>
+</div>
+</section>
+
+<section id="contacts" class="hero">
+<img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80">
+<div class="card">
+<h2 id="contactsTitle">Контакты</h2>
+<p>Телефон: +7 (926) 561-72-38</p>
+<p>Email: oskonov@logicalogistics.com</p>
+<p>Адрес: Москва, ул. Твардовского, д.5</p>
+</div>
+</section>
+
+<footer>
+© <span id="year"></span> LOGICA & TECHNOLOGIES
+</footer>
+
+<script>
+const ru = {
+title:"ООО «ЛОГИКА И ТЕХНОЛОГИИ»",
+subtitle:"Логистика и поставки по России и миру",
+aboutTitle:"О компании",
+aboutText:"ООО «ЛОГИКА И ТЕХНОЛОГИИ» — компания, специализирующаяся на логистике, поставках и сопровождении грузов.",
+servicesTitle:"Услуги",
+s1:"Контейнерные перевозки",
+s2:"Автомобильные перевозки",
+s3:"Складская обработка",
+s4:"Экспорт и импорт",
+s5:"Логистический консалтинг",
+advTitle:"Преимущества",
+a1:"Контроль на всех этапах",
+a2:"Надёжные партнёры",
+a3:"Гибкие тарифы",
+a4:"Опыт в логистике",
+contactsTitle:"Контакты"
+};
+
+const en = {
+title:"LOGICA & TECHNOLOGIES",
+subtitle:"Logistics and supply chain solutions",
+aboutTitle:"About us",
+aboutText:"LOGICA & TECHNOLOGIES is a logistics company specializing in transportation and supply chain management.",
+servicesTitle:"Services",
+s1:"Container transportation",
+s2:"Road transportation",
+s3:"Warehouse handling",
+s4:"Export and import",
+s5:"Logistics consulting",
+advTitle:"Advantages",
+a1:"Full control",
+a2:"Reliable partners",
+a3:"Flexible rates",
+a4:"Logistics expertise",
+contactsTitle:"Contacts"
+};
+
+function setLang(l){
+const t = l==="ru"?ru:en;
+for(let k in t){
+document.getElementById(k).textContent=t[k];
+}
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
