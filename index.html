@@ -1,302 +1,542 @@
-<!-- ===================== PART 1 / 2 ===================== -->
+<!-- ===================== PART 1 / X ===================== -->
+<!-- PART TITLE: CORE STRUCTURE + NAV + HERO + ABOUT -->
+<!-- NOTE: THIS COMMENT IS SAFE. DOES NOT AFFECT SITE. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>LOGICA LOGISTICS — International Logistics Partner</title>
-  <meta name="description" content="LOGICA LOGISTICS is an international logistics company providing structured, transparent and reliable supply chain solutions.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>LOGICA LOGISTICS — International Logistics & Supply Chain</title>
+  <meta name="description" content="LOGICA LOGISTICS — international logistics, container transportation, warehousing and supply chain coordination." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta property="og:title" content="LOGICA LOGISTICS — International Logistics Partner">
-  <meta property="og:description" content="Structured, transparent and reliable logistics solutions for global trade.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://logicalogistics.com">
+  <!-- Open Graph -->
+  <meta property="og:title" content="LOGICA LOGISTICS — International Logistics & Supply Chain" />
+  <meta property="og:description" content="Structured, transparent and reliable logistics solutions for global trade." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://logicalogistics.com" />
 
   <style>
-    :root{
-      --dark:#0b1324;
-      --dark2:#111a33;
-      --light:#f5f7fb;
-      --accent:#1f4fff;
-      --text:#1d2433;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --border:#e5e7eb;
+    /* ===================== RESET ===================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    *{margin:0;padding:0;box-sizing:border-box}
-
-    body{
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      background:var(--light);
-      color:var(--text);
-      line-height:1.6;
+    /* ===================== VARIABLES ===================== */
+    :root {
+      --bg-main: #f4f6fb;
+      --bg-dark: #0b1324;
+      --bg-dark-2: #111a33;
+      --accent: #1f4fff;
+      --text-main: #1d2433;
+      --text-muted: #6b7280;
+      --white: #ffffff;
+      --border: #e5e7eb;
     }
 
-    .container{
-      max-width:1200px;
-      margin:0 auto;
-      padding:0 24px;
+    /* ===================== BASE ===================== */
+    html {
+      scroll-behavior: smooth;
     }
 
-    /* NAV */
-    nav{
-      position:fixed;
-      top:0;left:0;
-      width:100%;
-      height:72px;
-      background:rgba(11,19,36,0.95);
-      z-index:1000;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.65;
     }
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      height:72px;
-    }
-    .logo{
-      color:#fff;
-      font-weight:700;
-      letter-spacing:1px;
-    }
-    .menu a{
-      color:#cbd5f5;
-      text-decoration:none;
-      margin-left:24px;
-      font-size:14px;
-    }
-    .menu a:hover{color:#fff}
 
-    .lang button{
-      background:transparent;
-      border:1px solid rgba(255,255,255,.3);
-      color:#cbd5f5;
-      padding:6px 10px;
-      margin-left:8px;
-      border-radius:6px;
-      cursor:pointer;
-      font-size:12px;
+    img {
+      max-width: 100%;
+      display: block;
     }
+
+    /* ===================== CONTAINER ===================== */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ===================== NAV ===================== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 74px;
+      background: rgba(11, 19, 36, 0.96);
+      z-index: 1000;
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      font-size: 15px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu a {
+      color: #cbd5f5;
+      text-decoration: none;
+      margin-left: 26px;
+      font-size: 14px;
+    }
+
+    .menu a:hover {
+      color: #ffffff;
+    }
+
+    .lang {
+      display: flex;
+      align-items: center;
+    }
+
+    .lang button {
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #cbd5f5;
+      padding: 6px 10px;
+      margin-left: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
     .lang button.active,
-    .lang button:hover{
-      color:#fff;
-      border-color:#fff;
+    .lang button:hover {
+      color: #ffffff;
+      border-color: #ffffff;
     }
 
-    /* HERO */
-    header{
-      padding-top:72px;
+    /* ===================== HERO ===================== */
+    header {
+      padding-top: 74px;
       background:
-        linear-gradient(rgba(11,19,36,.85),rgba(11,19,36,.85)),
-        url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80");
-      background-size:cover;
-      background-position:center;
-      color:#fff;
-    }
-    .hero{
-      min-height:85vh;
-      display:flex;
-      align-items:center;
-    }
-    .hero h1{
-      font-size:56px;
-      margin-bottom:24px;
-    }
-    .hero p{
-      font-size:20px;
-      color:#d1d5db;
-      max-width:720px;
-      margin-bottom:48px;
-    }
-    .hero-stats{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:32px;
-    }
-    .stat{
-      border-left:3px solid var(--accent);
-      padding-left:16px;
-    }
-    .stat strong{font-size:28px;display:block}
-    .stat span{font-size:14px;color:#cbd5f5}
-
-    section{padding:96px 0}
-    h2{font-size:36px;margin-bottom:24px}
-    .lead{
-      font-size:18px;
-      color:var(--muted);
-      max-width:800px;
-      margin-bottom:48px;
+        linear-gradient(rgba(11, 19, 36, 0.86), rgba(11, 19, 36, 0.86)),
+        url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=80");
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:32px;
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
     }
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:32px;
-    }
-    .card h3{margin-bottom:12px}
 
-    @media(max-width:900px){
-      .hero h1{font-size:40px}
-      .hero-stats{grid-template-columns:1fr}
-      section{padding:64px 0}
+    .hero h1 {
+      font-size: 58px;
+      letter-spacing: 1px;
+      margin-bottom: 26px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 760px;
+      color: #d1d5db;
+      margin-bottom: 52px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 34px;
+    }
+
+    .stat {
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 26px;
+    }
+
+    .stat span {
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    /* ===================== SECTIONS ===================== */
+    section {
+      padding: 104px 0;
+    }
+
+    h2 {
+      font-size: 38px;
+      margin-bottom: 26px;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 900px;
+      margin-bottom: 56px;
+    }
+
+    /* ===================== ABOUT ===================== */
+    .about-text p {
+      max-width: 900px;
+      margin-bottom: 18px;
+      font-size: 16px;
+      color: var(--text-main);
+    }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 960px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+      .hero-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+      section {
+        padding: 72px 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+      .menu {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="container nav">
-    <div class="logo">LOGICA LOGISTICS</div>
-    <div class="menu">
-      <a href="#about">About</a>
-      <a href="#strengths">Why us</a>
-      <a href="#scope">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="lang">
-      <button data-lang="en" class="active">EN</button>
-      <button data-lang="ru">RU</button>
-    </div>
-  </div>
-</nav>
+  <!-- ===================== NAV ===================== -->
+  <nav>
+    <div class="container nav">
+      <div class="logo">LOGICA LOGISTICS</div>
 
-<header>
-  <div class="container hero">
-    <div>
-      <h1 data-i18n="hero_title">LOGICA LOGISTICS</h1>
-      <p data-i18n="hero_sub">
-        International logistics partner delivering structured, transparent and reliable
-        supply chain solutions for global trade.
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#strengths">Strengths</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="lang">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="ru">RU</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header>
+    <div class="container hero">
+      <div>
+        <h1 data-i18n="hero_title">LOGICA LOGISTICS</h1>
+
+        <p data-i18n="hero_sub">
+          International logistics and supply chain partner providing structured,
+          transparent and reliable solutions for global trade.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>International</strong>
+            <span>Global logistics operations</span>
+          </div>
+          <div class="stat">
+            <strong>Containers</strong>
+            <span>Sea & land transportation</span>
+          </div>
+          <div class="stat">
+            <strong>Warehousing</strong>
+            <span>Storage & consolidation</span>
+          </div>
+          <div class="stat">
+            <strong>Control</strong>
+            <span>End-to-end coordination</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="container">
+      <h2 data-i18n="about_title">Who we are</h2>
+
+      <p class="lead" data-i18n="about_lead">
+        LOGICA LOGISTICS is an international logistics company focused on building
+        long-term partnerships and delivering predictable, well-controlled supply chains.
       </p>
-      <div class="hero-stats">
-        <div class="stat"><strong>International</strong><span>Cross-border logistics</span></div>
-        <div class="stat"><strong>Structured</strong><span>Clear processes</span></div>
-        <div class="stat"><strong>Partner-driven</strong><span>Long-term focus</span></div>
-      </div>
-    </div>
-  </div>
-</header>
 
-<section id="about">
-  <div class="container">
-    <h2 data-i18n="about_title">Who we are</h2>
-    <p class="lead" data-i18n="about_lead">
-      LOGICA LOGISTICS is an international logistics company focused on long-term
-      partnerships and predictable supply chains.
-    </p>
-    <p>
-      We act as a coordination and control center, integrating carriers, ports,
-      warehouses and partners into a single managed workflow.
-    </p>
-  </div>
-</section>
-<!-- ===================== PART 2 / 2 ===================== -->
-
-<section>
-  <div class="container grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&q=80" style="width:100%;border-radius:10px;margin-bottom:16px">
-      <h3>Warehousing</h3>
-      <p>Controlled storage and consolidation within partner facilities.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80" style="width:100%;border-radius:10px;margin-bottom:16px">
-      <h3>Port operations</h3>
-      <p>Terminal coordination and container handling.</p>
-    </div>
-  </div>
-</section>
-
-<section id="strengths">
-  <div class="container">
-    <h2>Why work with us</h2>
-    <div class="grid">
-      <div class="card"><h3>Reliability</h3><p>Clear obligations and realistic timelines.</p></div>
-      <div class="card"><h3>Expertise</h3><p>Deep understanding of international logistics.</p></div>
-      <div class="card"><h3>Transparency</h3><p>Full visibility at every stage.</p></div>
-      <div class="card"><h3>Flexibility</h3><p>Adapted solutions for each project.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="scope">
-  <div class="container">
-    <h2>Our scope</h2>
-    <div class="grid">
-      <div class="card"><h3>International transportation</h3><p>Global cargo coordination.</p></div>
-      <div class="card"><h3>Container logistics</h3><p>Operational container support.</p></div>
-      <div class="card"><h3>Supply chain control</h3><p>End-to-end process management.</p></div>
-      <div class="card"><h3>Documentation</h3><p>Compliance and paperwork.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    <h2>Contact</h2>
-    <p class="lead">We are open for cooperation and long-term partnerships.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Email</h3>
-        <p>oskonov@logicalogistics.com</p>
-      </div>
-      <div class="card">
-        <h3>Office</h3>
+      <div class="about-text">
         <p>
-          Technopark Strogino<br>
-          Tvardovskogo st., 8, bld. 1<br>
-          Moscow, 123458, Russia
+          We operate as a logistics coordination hub, combining carriers, ports,
+          warehouses and service providers into a single managed system.
+        </p>
+        <p>
+          Our role is to ensure stability, transparency and accountability across
+          all stages of transportation — from planning and documentation to final delivery.
+        </p>
+        <p>
+          We deliberately focus on quality and operational control rather than scale,
+          allowing us to stay flexible and personally involved in each project.
         </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container">
-    <strong>LOGICA LOGISTICS</strong>
-    <p>Technopark Strogino</p>
-    <p>Moscow, Russia</p>
-    <p style="margin-top:12px">© 2026 LOGICA LOGISTICS</p>
-  </div>
-</footer>
+<!-- ===================== END OF PART 1 ===================== -->
+<!-- ===================== PART 2 / X ===================== -->
+<!-- PART TITLE: STRENGTHS + SERVICES + VISUALS + CONTACT + FOOTER + I18N -->
+<!-- NOTE: THIS COMMENT IS SAFE. DOES NOT AFFECT SITE. -->
 
-<script>
-const dict={
-  en:{
-    hero_title:"LOGICA LOGISTICS",
-    hero_sub:"International logistics partner delivering structured, transparent and reliable supply chain solutions for global trade.",
-    about_title:"Who we are",
-    about_lead:"LOGICA LOGISTICS is an international logistics company focused on long-term partnerships and predictable supply chains."
-  },
-  ru:{
-    hero_title:"LOGICA LOGISTICS",
-    hero_sub:"Международный логистический партнёр, обеспечивающий структурированные и надёжные цепочки поставок.",
-    about_title:"О компании",
-    about_lead:"LOGICA LOGISTICS — международная логистическая компания, ориентированная на долгосрочное партнёрство."
-  }
-};
+  <!-- ===================== STRENGTHS ===================== -->
+  <section id="strengths">
+    <div class="container">
+      <h2>Why work with us</h2>
 
-document.querySelectorAll(".lang button").forEach(b=>{
-  b.onclick=()=>{
-    document.querySelectorAll(".lang button").forEach(x=>x.classList.remove("active"));
-    b.classList.add("active");
-    const l=b.dataset.lang;
-    document.querySelectorAll("[data-i18n]").forEach(el=>{
-      const k=el.dataset.i18n;
-      if(dict[l][k]) el.textContent=dict[l][k];
+      <p class="lead">
+        Our core value is operational control. We do not sell promises —
+        we build predictable logistics processes.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Operational reliability</h3>
+          <p>
+            Clear commitments, realistic timelines and disciplined execution
+            across all stages of transportation.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>International experience</h3>
+          <p>
+            Hands-on work with ports, shipping lines, terminals and cross-border
+            logistics flows.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Cost transparency</h3>
+          <p>
+            Transparent pricing model, clear cost structure and predictable
+            logistics budgets.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Partner mindset</h3>
+          <p>
+            We integrate into our clients’ processes instead of acting as a
+            transactional intermediary.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Flexibility</h3>
+          <p>
+            Fast adaptation to route changes, volumes and market conditions
+            without loss of control.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Risk management</h3>
+          <p>
+            Proactive handling of delays, congestion, documentation and
+            operational risks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VISUAL BLOCK ===================== -->
+  <section>
+    <div class="container grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1400&q=80" alt="Warehouse" style="border-radius:12px;margin-bottom:18px;">
+        <h3>Warehousing & consolidation</h3>
+        <p>
+          Controlled storage, consolidation and transshipment through
+          partner warehouse infrastructure.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1400&q=80" alt="Port operations" style="border-radius:12px;margin-bottom:18px;">
+        <h3>Port & terminal operations</h3>
+        <p>
+          Coordination of container handling, terminal operations and
+          port-related logistics activities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+
+      <p class="lead">
+        LOGICA LOGISTICS covers the full operational scope required to move
+        cargo through international supply chains.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>International transportation</h3>
+          <p>
+            Sea and land transportation across key global trade routes.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Container logistics</h3>
+          <p>
+            FCL coordination, port handling, empty container return
+            and scheduling.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Warehousing</h3>
+          <p>
+            Storage, consolidation and cargo handling through
+            partner facilities.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Supply chain coordination</h3>
+          <p>
+            End-to-end control from origin to destination.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Documentation</h3>
+          <p>
+            Export, import and transit documentation support.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Logistics consulting</h3>
+          <p>
+            Route optimisation, cost analysis and logistics audits.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+
+      <p class="lead">
+        We are open for cooperation with shippers, traders and logistics partners.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Email</h3>
+          <p>oskonov@logicalogistics.com</p>
+        </div>
+
+        <div class="card">
+          <h3>Office location</h3>
+          <p>
+            Technopark Strogino<br>
+            Tvardovskogo street, 8, building 1<br>
+            Moscow, 123458, Russia
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Working hours</h3>
+          <p>
+            Monday – Friday<br>
+            09:00 – 18:00 (MSK)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <strong>LOGICA LOGISTICS</strong>
+      <p>International logistics & supply chain coordination</p>
+      <p>Technopark Strogino, Moscow</p>
+      <p style="margin-top:14px;">© 2026 LOGICA LOGISTICS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== I18N SCRIPT ===================== -->
+  <script>
+    const dict = {
+      en: {
+        hero_title: "LOGICA LOGISTICS",
+        hero_sub:
+          "International logistics and supply chain partner providing structured, transparent and reliable solutions for global trade.",
+        about_title: "Who we are",
+        about_lead:
+          "LOGICA LOGISTICS is an international logistics company focused on building long-term partnerships and delivering predictable, well-controlled supply chains."
+      },
+      ru: {
+        hero_title: "LOGICA LOGISTICS",
+        hero_sub:
+          "Международный логистический партнёр, обеспечивающий прозрачные и управляемые цепочки поставок.",
+        about_title: "О компании",
+        about_lead:
+          "LOGICA LOGISTICS — международная логистическая компания, ориентированная на долгосрочное партнёрство и контроль цепочек поставок."
+      }
+    };
+
+    document.querySelectorAll(".lang button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".lang button").forEach(b =>
+          b.classList.remove("active")
+        );
+        btn.classList.add("active");
+
+        const lang = btn.dataset.lang;
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.dataset.i18n;
+          if (dict[lang][key]) {
+            el.textContent = dict[lang][key];
+          }
+        });
+      });
     });
-  };
-});
-</script>
+  </script>
 
 </body>
 </html>
+
+<!-- ===================== END OF PART 2 ===================== -->
