@@ -1,178 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LOGICA LOGISTICS</title>
-  <meta name="description" content="LOGICA LOGISTICS — international logistics partner focused on reliability, transparency and long-term cooperation.">
+    <meta charset="UTF-8">
+    <title>LOGICA LOGISTICS — Logistics & Supply Chain Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #1f2937;
-      background-color: #ffffff;
-      line-height: 1.6;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1c1c1c;
+            background-color: #f5f7fa;
+        }
 
-    header {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 40px 20px;
-    }
+        header {
+            background: linear-gradient(
+                rgba(0,0,0,0.45),
+                rgba(0,0,0,0.45)
+            ),
+            url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 90px 20px;
+            text-align: center;
+        }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
 
-    .logo {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
+        header p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-    .hero {
-      padding: 80px 20px;
-      background: #f8fafc;
-    }
+        nav {
+            background: #0b3c6f;
+            padding: 15px;
+            text-align: center;
+        }
 
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
-    }
+        section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
 
-    section {
-      padding: 70px 20px;
-    }
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #0b3c6f;
+        }
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
+        .about {
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 900px;
+        }
 
-    .strengths {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+        .strengths {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
 
-    .card {
-      border: 1px solid #e5e7eb;
-      padding: 25px;
-      border-radius: 8px;
-      background: #ffffff;
-    }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 20px;
-    }
+        .card h3 {
+            margin-top: 0;
+            color: #0b3c6f;
+        }
 
-    footer {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 40px 20px;
-      font-size: 14px;
-    }
+        .card p {
+            line-height: 1.6;
+        }
 
-    .footer-block {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+        footer {
+            background: #0b3c6f;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 30px;
-      }
-    }
-  </style>
+        footer p {
+            margin: 8px 0;
+        }
+    </style>
 </head>
+
 <body>
 
+<nav>
+    <a href="#about">About</a>
+    <a href="#strengths">Why Us</a>
+    <a href="#contacts">Contacts</a>
+</nav>
+
 <header>
-  <div class="container">
-    <div class="logo">LOGICA LOGISTICS</div>
-  </div>
+    <h1>LOGICA LOGISTICS</h1>
+    <p>Reliable logistics and supply chain solutions for international trade</p>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <h1>International logistics partner</h1>
-    <p>
-      LOGICA LOGISTICS provides structured and reliable logistics solutions,
-      focusing on transparency, efficiency and long-term cooperation.
-    </p>
-  </div>
+<section id="about">
+    <h2>About the Company</h2>
+    <div class="about">
+        LOGICA LOGISTICS is a logistics company focused on providing reliable,
+        transparent and well-structured supply chain solutions.
+        <br><br>
+        We work with manufacturers, traders and industrial partners who value
+        predictability, clear communication and responsibility at every stage
+        of cargo movement — from planning to final delivery.
+    </div>
 </section>
 
-<section>
-  <div class="container">
-    <h2>Why work with us</h2>
+<section id="strengths">
+    <h2>Why Companies Work With Us</h2>
+
     <div class="strengths">
+        <div class="card">
+            <h3>Reliability</h3>
+            <p>
+                We build cooperation based on clear obligations,
+                realistic timelines and predictable results.
+            </p>
+        </div>
 
-      <div class="card">
-        <h3>Reliability</h3>
-        <p>
-          We build cooperation based on clear obligations, realistic timelines
-          and predictable results.
-        </p>
-      </div>
+        <div class="card">
+            <h3>Logistics Expertise</h3>
+            <p>
+                Deep understanding of international logistics,
+                port operations, documentation and coordination.
+            </p>
+        </div>
 
-      <div class="card">
-        <h3>Logistics expertise</h3>
-        <p>
-          Deep understanding of the full logistics chain — from port operations
-          to documentation and coordination.
-        </p>
-      </div>
+        <div class="card">
+            <h3>Partner-Oriented Approach</h3>
+            <p>
+                We work as an extension of our partners’ teams,
+                focusing on long-term cooperation.
+            </p>
+        </div>
 
-      <div class="card">
-        <h3>Partner-oriented approach</h3>
-        <p>
-          We work not just as a service provider, but as a logistics partner,
-          focusing on sustainable solutions.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Operational transparency</h3>
-        <p>
-          Clear communication, transparent costs and structured workflow at
-          every stage of transportation.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>International focus</h3>
-        <p>
-          Experience working with international partners, shipping lines and
-          logistics operators.
-        </p>
-      </div>
-
+        <div class="card">
+            <h3>Operational Control</h3>
+            <p>
+                Full visibility of cargo movement and cost structure
+                at every stage of the logistics chain.
+            </p>
+        </div>
     </div>
-  </div>
+</section>
+
+<section id="contacts">
+    <h2>Contacts</h2>
+    <p>
+        <strong>Office location:</strong><br>
+        Technopark Strogino<br>
+        Tvardovskogo street, 8, building 1<br>
+        Moscow, 123458, Russia
+    </p>
 </section>
 
 <footer>
-  <div class="footer-block">
     <p><strong>LOGICA LOGISTICS</strong></p>
-    <p>
-      Technopark Strogino<br>
-      Tvardovskogo street, 8, building 1<br>
-      Moscow, 123458, Russia
-    </p>
-    <p>
-      © 2026 LOGICA LOGISTICS. All rights reserved.
-    </p>
-  </div>
+    <p>Logistics & Supply Chain Solutions</p>
 </footer>
 
 </body>
