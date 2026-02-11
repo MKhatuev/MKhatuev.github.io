@@ -322,11 +322,11 @@
 
       <div class="grid">
         <div class="card">
-          <h3>Operational reliability</h3>
-          <p>
-            Clear commitments, realistic timelines and disciplined execution
-            across all stages of transportation.
-          </p>
+         <h3 data-i18n="str1_title">Operational reliability</h3>
+<p data-i18n="str1_text">
+  Clear commitments, realistic timelines and disciplined execution
+  across all stages of transportation.
+</p>
         </div>
 
         <div class="card">
@@ -376,7 +376,10 @@
   <section>
     <div class="container grid">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1400&q=80" alt="Warehouse" style="border-radius:12px;margin-bottom:18px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Container_terminal_in_Port_of_Hamburg.jpg"
+     alt="Container terminal"
+     style="border-radius:12px;margin-bottom:18px;">
+
         <h3>Warehousing & consolidation</h3>
         <p>
           Controlled storage, consolidation and transshipment through
@@ -398,7 +401,7 @@
   <!-- ===================== SERVICES ===================== -->
   <section id="services">
     <div class="container">
-      <h2>Services</h2>
+      <h2 data-i18n="services_title">Services</h2>
 
       <p class="lead">
         LOGICA LOGISTICS covers the full operational scope required to move
@@ -456,7 +459,7 @@
   <!-- ===================== CONTACT ===================== -->
   <section id="contact">
     <div class="container">
-      <h2>Contact</h2>
+      <h2 data-i18n="contact_title">Contact</h2>
 
       <p class="lead">
         We are open for cooperation with shippers, traders and logistics partners.
@@ -492,55 +495,150 @@
   <footer>
     <div class="container">
       <strong>LOGICA LOGISTICS</strong>
-      <p>International logistics & supply chain coordination</p>
+      <p data-i18n="footer_desc">International logistics & supply chain coordination</p>
       <p>Technopark Strogino, Moscow</p>
       <p style="margin-top:14px;">© 2026 LOGICA LOGISTICS. All rights reserved.</p>
     </div>
   </footer>
 
   <!-- ===================== I18N SCRIPT ===================== -->
-  <script>
+<script>
 const dict = {
   en: {
-    hero_title: "LOGICA LOGISTICS",
-    hero_sub:
-      "International logistics and supply chain partner providing structured, transparent and reliable solutions for global trade.",
 
-    about_title: "Who we are",
-    about_lead:
-      "LOGICA LOGISTICS is an international logistics company focused on building long-term partnerships and delivering predictable, well-controlled supply chains.",
-
+    /* NAV */
     nav_about: "About",
     nav_strengths: "Strengths",
     nav_services: "Services",
     nav_contact: "Contact",
 
-    strengths_title: "Why work with us"
+    /* HERO */
+    hero_title: "LOGICA LOGISTICS",
+    hero_sub: "International logistics and supply chain partner providing structured, transparent and reliable solutions for global trade.",
+
+    /* ABOUT */
+    about_title: "Who we are",
+    about_lead: "LOGICA LOGISTICS is an international logistics company focused on building long-term partnerships and delivering predictable, well-controlled supply chains.",
+
+    /* STRENGTHS */
+    strengths_title: "Why work with us",
+
+    str1_title: "Operational reliability",
+    str1_text: "Clear commitments, realistic timelines and disciplined execution across all stages of transportation.",
+
+    str2_title: "International experience",
+    str2_text: "Hands-on work with ports, shipping lines, terminals and cross-border logistics flows.",
+
+    str3_title: "Cost transparency",
+    str3_text: "Transparent pricing model, clear cost structure and predictable logistics budgets.",
+
+    str4_title: "Partner mindset",
+    str4_text: "We integrate into our clients’ processes instead of acting as a transactional intermediary.",
+
+    str5_title: "Flexibility",
+    str5_text: "Fast adaptation to route changes, volumes and market conditions without loss of control.",
+
+    str6_title: "Risk management",
+    str6_text: "Proactive handling of delays, congestion, documentation and operational risks.",
+
+    /* SERVICES */
+    services_title: "Services",
+
+    serv1_title: "International transportation",
+    serv1_text: "Sea and land transportation across key global trade routes.",
+
+    serv2_title: "Container logistics",
+    serv2_text: "FCL coordination, port handling, empty container return and scheduling.",
+
+    serv3_title: "Warehousing",
+    serv3_text: "Storage, consolidation and cargo handling through partner facilities.",
+
+    serv4_title: "Supply chain coordination",
+    serv4_text: "End-to-end control from origin to destination.",
+
+    serv5_title: "Documentation",
+    serv5_text: "Export, import and transit documentation support.",
+
+    serv6_title: "Logistics consulting",
+    serv6_text: "Route optimisation, cost analysis and logistics audits.",
+
+    /* CONTACT */
+    contact_title: "Contact",
+    contact_text: "We are open for cooperation with shippers, traders and logistics partners.",
+
+    footer_desc: "International logistics & supply chain coordination"
   },
 
   ru: {
-    hero_title: "LOGICA LOGISTICS",
-    hero_sub:
-      "Международный логистический партнёр, обеспечивающий прозрачные и управляемые цепочки поставок.",
 
-    about_title: "О компании",
-    about_lead:
-      "LOGICA LOGISTICS — международная логистическая компания, ориентированная на долгосрочное партнёрство и контроль цепочек поставок.",
-
+    /* NAV */
     nav_about: "О компании",
     nav_strengths: "Преимущества",
     nav_services: "Услуги",
     nav_contact: "Контакты",
 
-    strengths_title: "Почему работают с нами"
+    /* HERO */
+    hero_title: "LOGICA LOGISTICS",
+    hero_sub: "Международный логистический партнёр, обеспечивающий прозрачные и управляемые цепочки поставок.",
+
+    /* ABOUT */
+    about_title: "О компании",
+    about_lead: "LOGICA LOGISTICS — международная логистическая компания, ориентированная на долгосрочное партнёрство и контроль цепочек поставок.",
+
+    /* STRENGTHS */
+    strengths_title: "Почему работают с нами",
+
+    str1_title: "Операционная надёжность",
+    str1_text: "Чёткие обязательства, реалистичные сроки и дисциплинированное выполнение на всех этапах перевозки.",
+
+    str2_title: "Международный опыт",
+    str2_text: "Практический опыт работы с портами, судоходными линиями и международными перевозками.",
+
+    str3_title: "Прозрачность затрат",
+    str3_text: "Понятная структура расходов и прогнозируемый логистический бюджет.",
+
+    str4_title: "Партнёрский подход",
+    str4_text: "Мы интегрируемся в процессы клиента, а не работаем как разовый посредник.",
+
+    str5_title: "Гибкость",
+    str5_text: "Быстрая адаптация к изменениям маршрутов и объёмов без потери контроля.",
+
+    str6_title: "Управление рисками",
+    str6_text: "Проактивное решение вопросов задержек, перегрузок и документации.",
+
+    /* SERVICES */
+    services_title: "Услуги",
+
+    serv1_title: "Международные перевозки",
+    serv1_text: "Морские и наземные перевозки по ключевым торговым направлениям.",
+
+    serv2_title: "Контейнерная логистика",
+    serv2_text: "Координация FCL, портовая обработка и контроль возврата контейнеров.",
+
+    serv3_title: "Складская обработка",
+    serv3_text: "Хранение, консолидация и обработка грузов через партнёрские склады.",
+
+    serv4_title: "Координация цепочек поставок",
+    serv4_text: "Контроль процесса от отправителя до получателя.",
+
+    serv5_title: "Документация",
+    serv5_text: "Сопровождение экспортных, импортных и транзитных операций.",
+
+    serv6_title: "Логистический консалтинг",
+    serv6_text: "Оптимизация маршрутов и анализ логистических затрат.",
+
+    /* CONTACT */
+    contact_title: "Контакты",
+    contact_text: "Открыты для сотрудничества с грузоотправителями и партнёрами.",
+
+    footer_desc: "Международная логистика и координация цепочек поставок"
   }
 };
 
 document.querySelectorAll(".lang button").forEach(btn => {
   btn.addEventListener("click", () => {
-    document.querySelectorAll(".lang button").forEach(b =>
-      b.classList.remove("active")
-    );
+
+    document.querySelectorAll(".lang button").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
     const lang = btn.dataset.lang;
@@ -551,9 +649,10 @@ document.querySelectorAll(".lang button").forEach(btn => {
         el.textContent = dict[lang][key];
       }
     });
+
   });
 });
-  </script>
+</script>
 
 </body>
 </html>
