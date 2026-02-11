@@ -230,12 +230,13 @@
     <div class="container nav">
       <div class="logo">LOGICA LOGISTICS</div>
 
-      <div class="menu">
-        <a href="#about">About</a>
-        <a href="#strengths">Strengths</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
+<div class="menu">
+  <a href="#about" data-i18n="nav_about">About</a>
+  <a href="#strengths" data-i18n="nav_strengths">Strengths</a>
+  <a href="#services" data-i18n="nav_services">Services</a>
+  <a href="#contact" data-i18n="nav_contact">Contact</a>
+</div>
+      
 
       <div class="lang">
         <button data-lang="en" class="active">EN</button>
@@ -312,7 +313,7 @@
   <!-- ===================== STRENGTHS ===================== -->
   <section id="strengths">
     <div class="container">
-      <h2>Why work with us</h2>
+      <h2 data-i18n="strengths_title">Why work with us</h2>
 
       <p class="lead">
         Our core value is operational control. We do not sell promises —
@@ -499,8 +500,38 @@
 
   <!-- ===================== I18N SCRIPT ===================== -->
   <script>
-    const dict = {
-      en: {
+   const dict = {
+  en: {
+    hero_title: "LOGICA LOGISTICS",
+    hero_sub:
+      "International logistics and supply chain partner providing structured, transparent and reliable solutions for global trade.",
+
+    about_title: "Who we are",
+    about_lead:
+      "LOGICA LOGISTICS is an international logistics company focused on building long-term partnerships and delivering predictable, well-controlled supply chains.",
+
+    nav_about: "About",
+    nav_strengths: "Strengths",
+    nav_services: "Services",
+    nav_contact: "Contact"
+  },
+
+  ru: {
+    hero_title: "LOGICA LOGISTICS",
+    hero_sub:
+      "Международный логистический партнёр, обеспечивающий прозрачные и управляемые цепочки поставок.",
+
+    about_title: "О компании",
+    about_lead:
+      "LOGICA LOGISTICS — международная логистическая компания, ориентированная на долгосрочное партнёрство и контроль цепочек поставок.",
+
+    nav_about: "О компании",
+    nav_strengths: "Преимущества",
+    nav_services: "Услуги",
+    nav_contact: "Контакты"
+  }
+};
+
         hero_title: "LOGICA LOGISTICS",
         hero_sub:
           "International logistics and supply chain partner providing structured, transparent and reliable solutions for global trade.",
