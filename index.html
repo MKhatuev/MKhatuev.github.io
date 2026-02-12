@@ -220,6 +220,27 @@
         display: none;
       }
     }
+    /* ===================== GRID FIX ===================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
   </style>
 </head>
 
@@ -292,23 +313,23 @@
       long-term partnerships and delivering predictable, well-controlled supply chains.
     </p>
 
-    <div class="about-text">
-      <p data-i18n="about_p1">
-        We operate as a logistics coordination hub, combining carriers, ports,
-        warehouses and service providers into a single managed system.
-      </p>
+<div class="about-text">
 
-      <p data-i18n="about_p2">
-        Our role is to ensure stability, transparency and accountability across
-        all stages of transportation — from planning and documentation to final delivery.
-      </p>
+  <p data-i18n="about_p1">
+    We operate as a logistics coordination hub, combining carriers,
+    ports, warehouses and service providers into a single managed system.
+  </p>
 
-      <p data-i18n="about_p3">
-        We deliberately focus on quality and operational control rather than scale,
-        allowing us to stay flexible and personally involved in each project.
-      </p>
-    </div>
-  </div>
+  <p data-i18n="about_p2">
+    Our role is to ensure stability, transparency and accountability
+    across all stages of transportation — from planning and documentation to final delivery.
+  </p>
+
+  <p data-i18n="about_p3">
+    We deliberately focus on quality and operational control rather than scale,
+    allowing us to stay flexible and personally involved in each project.
+  </p>
+</div>
 </section>
 
 <!-- ===================== END OF PART 1 ===================== -->
@@ -361,31 +382,34 @@
   </div>
 </section>
 
-  <!-- ===================== VISUAL BLOCK ===================== -->
-  <section>
-    <div class="container grid">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Container_terminal_in_Port_of_Hamburg.jpg"
-     alt="Container terminal"
-     style="border-radius:12px;margin-bottom:18px;">
+<!-- ===================== VISUAL BLOCK ===================== -->
+<section>
+  <div class="container grid">
 
-        <h3>Warehousing & consolidation</h3>
-        <p>
-          Controlled storage, consolidation and transshipment through
-          partner warehouse infrastructure.
-        </p>
-      </div>
-
-      <div class="card">
-       <img src="https://images.unsplash.com/photo-1494412574643-ff35c0a5c66b?auto=format&fit=crop&w=1400&q=80" alt="Container terminal" style="border-radius:12px;margin-bottom:18px;">
-        <h3>Port & terminal operations</h3>
-        <p>
-          Coordination of container handling, terminal operations and
-          port-related logistics activities.
-        </p>
-      </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Warehouse_interior.jpg"
+           alt="Warehouse"
+           style="border-radius:12px;margin-bottom:18px;width:100%;height:260px;object-fit:cover;">
+      <h3>Warehousing & consolidation</h3>
+      <p>
+        Controlled storage, consolidation and transshipment through
+        partner warehouse infrastructure.
+      </p>
     </div>
-  </section>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Container_terminal_in_Port_of_Hamburg.jpg"
+           alt="Container terminal"
+           style="border-radius:12px;margin-bottom:18px;width:100%;height:260px;object-fit:cover;">
+      <h3>Port & terminal operations</h3>
+      <p>
+        Coordination of container handling, terminal operations and
+        port-related logistics activities.
+      </p>
+    </div>
+
+  </div>
+</section>
 
   <!-- ===================== SERVICES ===================== -->
 <section id="services">
@@ -432,22 +456,22 @@
   </div>
 </section>
 
-  <!-- ===================== CONTACT ===================== -->
+<!-- ===================== CONTACT ===================== -->
 <section id="contact">
   <div class="container">
+
     <h2 data-i18n="contact_title">Contact</h2>
-
-    <p class="lead" data-i18n="contact_text"></p>
-
+    <p class="lead" data-i18n="contact_text">
+      We are open for cooperation with shippers, traders and logistics partners.
+    </p>
     <div class="grid">
       <div class="card">
-        <h3>Email</h3>
+        <h3 data-i18n="contact_email_title">Email</h3>
         <p>oskonov@logicalogistics.com</p>
       </div>
-
       <div class="card">
-        <h3>Office location</h3>
-        <p>
+        <h3 data-i18n="contact_office_title">Office location</h3>
+        <p data-i18n="contact_office_text">
           Technopark Strogino<br>
           Tvardovskogo street, 8, building 1<br>
           Moscow, 123458, Russia
@@ -514,6 +538,16 @@ stat4_text: "End-to-end coordination",
     /* ABOUT */
     about_title: "Who we are",
     about_lead: "LOGICA LOGISTICS is an international logistics company focused on building long-term partnerships and delivering predictable, well-controlled supply chains.",
+
+contact_title: "Contact",
+contact_text: "We are open for cooperation with shippers, traders and logistics partners.",
+contact_email_title: "Email",
+contact_office_title: "Office location",
+contact_office_text: "Technopark Strogino\nTvardovskogo street, 8, building 1\nMoscow, 123458, Russia",
+    
+about_p1: "We operate as a logistics coordination hub, combining carriers, ports, warehouses and service providers into a single managed system.",
+about_p2: "Our role is to ensure stability, transparency and accountability across all stages of transportation — from planning and documentation to final delivery.",
+about_p3: "We deliberately focus on quality and operational control rather than scale, allowing us to stay flexible and personally involved in each project.",
 
     /* STRENGTHS */
     strengths_title: "Why work with us",
@@ -588,7 +622,17 @@ str6_text: "Проактивное управление задержками, п
 
 strengths_lead: "Наша основа — операционный контроль. Мы не продаём обещания — мы строим предсказуемые логистические процессы.",
 services_lead: "LOGICA LOGISTICS обеспечивает полный операционный цикл международной логистики.",
+
+contact_title: "Контакты",
+contact_text: "Открыты для сотрудничества с грузоотправителями и партнёрами.",
+contact_email_title: "Электронная почта",
+contact_office_title: "Адрес офиса",
+contact_office_text: "Технопарк Строгино\nул. Твардовского, 8, стр. 1\nМосква, 123458, Россия",
     
+about_p1: "Мы выступаем в роли координационного логистического центра, объединяя перевозчиков, порты, склады и сервисных партнёров в единую управляемую систему.",
+about_p2: "Наша задача — обеспечить стабильность, прозрачность и контроль на всех этапах перевозки — от планирования и документации до финальной доставки.",
+about_p3: "Мы сознательно делаем ставку на качество и операционный контроль, а не на масштаб, оставаясь гибкими и лично вовлечёнными в каждый проект.",
+
     /* NAV */
     nav_about: "О компании",
     nav_strengths: "Преимущества",
