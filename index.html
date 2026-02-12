@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>LOGICA LOGISTICS</title>
+<title>LOGICA LOGISTICS — International Logistics</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 :root{
 --bg:#f4f6fb;
@@ -17,68 +17,73 @@
 --white:#ffffff;
 }
 
+html{scroll-behavior:smooth;}
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
 background:var(--bg);
 color:var(--text);
-line-height:1.6;
+line-height:1.65;
 }
 
 .container{
 max-width:1200px;
 margin:0 auto;
-padding:0 24px;
+padding:0 28px;
 }
 
 nav{
 position:fixed;
 top:0;
+left:0;
 width:100%;
-height:70px;
-background:var(--dark);
-display:flex;
-align-items:center;
+height:74px;
+background:rgba(11,19,36,.96);
 z-index:1000;
 }
 
 .nav{
+height:74px;
 display:flex;
-justify-content:space-between;
 align-items:center;
-width:100%;
+justify-content:space-between;
 }
 
-.logo{color:#fff;font-weight:700}
+.logo{
+color:#fff;
+font-weight:700;
+letter-spacing:1px;
+font-size:15px;
+}
 
 .menu a{
 color:#cbd5f5;
-margin-left:25px;
 text-decoration:none;
+margin-left:26px;
 font-size:14px;
 }
 
-.menu a:hover{color:#fff}
+.menu a:hover{color:#fff;}
 
 .lang button{
 background:none;
-border:1px solid rgba(255,255,255,0.4);
+border:1px solid rgba(255,255,255,.4);
 color:#cbd5f5;
-padding:5px 10px;
-margin-left:6px;
+padding:6px 10px;
+margin-left:8px;
 border-radius:6px;
 cursor:pointer;
 font-size:12px;
 }
 
-.lang button.active,
-.lang button:hover{
+.lang button.active{
 color:#fff;
 border-color:#fff;
 }
 
 header{
-padding-top:70px;
-background:linear-gradient(rgba(11,19,36,.85),rgba(11,19,36,.85)),
+padding-top:74px;
+background:
+linear-gradient(rgba(11,19,36,.85),rgba(11,19,36,.85)),
 url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=80");
 background-size:cover;
 background-position:center;
@@ -86,31 +91,53 @@ color:#fff;
 }
 
 .hero{
-min-height:85vh;
+min-height:90vh;
 display:flex;
 align-items:center;
 }
 
-.hero h1{font-size:52px;margin-bottom:20px}
+.hero h1{
+font-size:54px;
+margin-bottom:24px;
+}
 
-.hero p{max-width:700px;margin-bottom:40px;color:#d1d5db}
+.hero p{
+font-size:20px;
+max-width:760px;
+color:#d1d5db;
+margin-bottom:48px;
+}
 
 .hero-stats{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:25px;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
 }
 
 .stat{
 border-left:3px solid var(--accent);
-padding-left:12px;
+padding-left:16px;
 }
 
-section{padding:90px 0}
+.stat strong{
+display:block;
+font-size:24px;
+}
 
-h2{font-size:34px;margin-bottom:25px}
+section{
+padding:100px 0;
+}
 
-.lead{color:var(--muted);margin-bottom:40px;max-width:800px}
+h2{
+font-size:36px;
+margin-bottom:24px;
+}
+
+.lead{
+font-size:18px;
+color:var(--muted);
+margin-bottom:50px;
+}
 
 .grid{
 display:grid;
@@ -120,7 +147,7 @@ gap:28px;
 
 .card{
 background:#fff;
-padding:22px;
+padding:24px;
 border-radius:14px;
 box-shadow:0 10px 25px rgba(0,0,0,.05);
 }
@@ -130,40 +157,6 @@ width:100%;
 height:220px;
 object-fit:cover;
 border-radius:12px;
-margin-bottom:16px;
-}
-
-.map-section{margin-top:80px}
-
-.map-header{
-text-align:center;
-margin-bottom:30px;
-}
-
-.map-box{
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 20px 50px rgba(0,0,0,.12);
-}
-
-.map-box iframe{
-width:100%;
-height:420px;
-border:0;
-}
-
-footer{
-background:var(--dark);
-color:#fff;
-padding:40px 0;
-text-align:center;
-margin-top:80px;
-}
-
-@media(max-width:768px){
-.menu{display:none}
-.hero h1{font-size:38px}
-.map-box iframe{height:300px}
 }
 </style>
 </head>
@@ -175,6 +168,7 @@ margin-top:80px;
 <div class="logo">LOGICA LOGISTICS</div>
 <div class="menu">
 <a href="#about" data-i18n="nav_about">About</a>
+<a href="#strengths" data-i18n="nav_strengths">Strengths</a>
 <a href="#services" data-i18n="nav_services">Services</a>
 <a href="#contact" data-i18n="nav_contact">Contact</a>
 </div>
@@ -189,23 +183,25 @@ margin-top:80px;
 <div class="container hero">
 <div>
 <h1 data-i18n="hero_title">LOGICA LOGISTICS</h1>
-<p data-i18n="hero_sub"></p>
+<p data-i18n="hero_sub">
+International logistics and supply chain partner providing structured and reliable solutions.
+</p>
 <div class="hero-stats">
 <div class="stat">
-<strong data-i18n="stat1_title"></strong>
-<span data-i18n="stat1_text"></span>
+<strong data-i18n="stat1_title">International</strong>
+<span data-i18n="stat1_text">Global operations</span>
 </div>
 <div class="stat">
-<strong data-i18n="stat2_title"></strong>
-<span data-i18n="stat2_text"></span>
+<strong data-i18n="stat2_title">Containers</strong>
+<span data-i18n="stat2_text">Sea & land</span>
 </div>
 <div class="stat">
-<strong data-i18n="stat3_title"></strong>
-<span data-i18n="stat3_text"></span>
+<strong data-i18n="stat3_title">Warehousing</strong>
+<span data-i18n="stat3_text">Storage</span>
 </div>
 <div class="stat">
-<strong data-i18n="stat4_title"></strong>
-<span data-i18n="stat4_text"></span>
+<strong data-i18n="stat4_title">Control</strong>
+<span data-i18n="stat4_text">End-to-end</span>
 </div>
 </div>
 </div>
@@ -214,123 +210,247 @@ margin-top:80px;
 
 <section id="about">
 <div class="container">
-<h2 data-i18n="about_title"></h2>
-<p class="lead" data-i18n="about_text"></p>
+<h2 data-i18n="about_title">Who we are</h2>
+<p class="lead" data-i18n="about_lead">
+LOGICA LOGISTICS is an international logistics company focused on controlled supply chains.
+</p>
 </div>
 </section>
 
+<!-- END PART 1 -->
+<!-- ===================== STRENGTHS ===================== -->
+<section id="strengths">
+<div class="container">
+<h2 data-i18n="strengths_title">Why work with us</h2>
+<p class="lead" data-i18n="strengths_lead">
+We build predictable logistics processes based on operational control.
+</p>
+
+<div class="grid">
+<div class="card">
+<h3 data-i18n="str1_title">Operational reliability</h3>
+<p data-i18n="str1_text"></p>
+</div>
+
+<div class="card">
+<h3 data-i18n="str2_title">International experience</h3>
+<p data-i18n="str2_text"></p>
+</div>
+
+<div class="card">
+<h3 data-i18n="str3_title">Cost transparency</h3>
+<p data-i18n="str3_text"></p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
 <section id="services">
 <div class="container">
-<h2 data-i18n="services_title"></h2>
+<h2 data-i18n="services_title">Services</h2>
+<p class="lead" data-i18n="services_lead">
+Full operational scope for international cargo movement.
+</p>
+
 <div class="grid">
-<div class="card"><h3 data-i18n="serv1_title"></h3><p data-i18n="serv1_text"></p></div>
-<div class="card"><h3 data-i18n="serv2_title"></h3><p data-i18n="serv2_text"></p></div>
-<div class="card"><h3 data-i18n="serv3_title"></h3><p data-i18n="serv3_text"></p></div>
+<div class="card">
+<h3 data-i18n="serv1_title"></h3>
+<p data-i18n="serv1_text"></p>
+</div>
+
+<div class="card">
+<h3 data-i18n="serv2_title"></h3>
+<p data-i18n="serv2_text"></p>
+</div>
+
+<div class="card">
+<h3 data-i18n="serv3_title"></h3>
+<p data-i18n="serv3_text"></p>
+</div>
 </div>
 </div>
 </section>
 
+<!-- ===================== CONTACT ===================== -->
 <section id="contact">
 <div class="container">
-<h2 data-i18n="contact_title"></h2>
-<p class="lead" data-i18n="contact_text"></p>
+
+<h2 data-i18n="contact_title">Contact</h2>
+<p class="lead" data-i18n="contact_text">
+We are open for cooperation with shippers and partners.
+</p>
+
 <div class="grid">
 <div class="card">
-<h3>Email</h3>
+<h3 data-i18n="contact_email_title">Email</h3>
 <p>oskonov@logicalogistics.com</p>
 </div>
+
 <div class="card">
-<h3 data-i18n="office_title"></h3>
-<p data-i18n="office_text"></p>
-</div>
+<h3 data-i18n="contact_office_title">Office location</h3>
+<p data-i18n="contact_office_text"></p>
 </div>
 </div>
 
-<div class="map-section">
+</div>
+
+<!-- ===================== MAP ===================== -->
+<div style="margin-top:80px;">
 <div class="container">
-<div class="map-header">
-<h2 data-i18n="map_title"></h2>
-<p data-i18n="map_sub"></p>
+
+<h2 data-i18n="map_title" style="margin-bottom:10px;"></h2>
+<p data-i18n="map_sub" style="color:#6b7280;margin-bottom:30px;"></p>
+
+<div style="border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.15);">
+<iframe
+src="https://www.google.com/maps?q=Technopark+Strogino,+Tvardovskogo+8+Moscow&output=embed"
+width="100%"
+height="450"
+style="border:0;"
+loading="lazy"
+allowfullscreen>
+</iframe>
 </div>
-<div class="map-box">
-<iframe src="https://www.google.com/maps?q=Technopark+Strogino,+Moscow&output=embed"></iframe>
-</div>
+
 </div>
 </div>
 
 </section>
 
-<footer>
-<p data-i18n="footer_text"></p>
+<!-- ===================== FOOTER ===================== -->
+<footer style="background:#0b1324;color:#fff;padding:60px 0;margin-top:100px;">
+<div class="container">
+<strong>LOGICA LOGISTICS</strong>
+<p data-i18n="footer_desc" style="margin-top:10px;"></p>
+<p style="margin-top:10px;">© 2026 LOGICA LOGISTICS</p>
+</div>
 </footer>
-
 <script>
-const dict={
-en:{
+const dict = {
+en: {
 nav_about:"About",
+nav_strengths:"Strengths",
 nav_services:"Services",
 nav_contact:"Contact",
+
 hero_title:"LOGICA LOGISTICS",
 hero_sub:"International logistics and supply chain partner providing structured and reliable solutions.",
-stat1_title:"International",stat1_text:"Global operations",
-stat2_title:"Containers",stat2_text:"Sea & land",
-stat3_title:"Warehousing",stat3_text:"Storage & consolidation",
-stat4_title:"Control",stat4_text:"End-to-end coordination",
+
+stat1_title:"International",
+stat1_text:"Global operations",
+stat2_title:"Containers",
+stat2_text:"Sea & land",
+stat3_title:"Warehousing",
+stat3_text:"Storage",
+stat4_title:"Control",
+stat4_text:"End-to-end",
+
 about_title:"Who we are",
-about_text:"LOGICA LOGISTICS builds controlled and predictable supply chains.",
+about_lead:"LOGICA LOGISTICS is an international logistics company focused on controlled supply chains.",
+
+strengths_title:"Why work with us",
+strengths_lead:"We build predictable logistics processes based on operational control.",
+
+str1_title:"Operational reliability",
+str1_text:"Clear commitments and disciplined execution.",
+str2_title:"International experience",
+str2_text:"Experience with ports and cross-border flows.",
+str3_title:"Cost transparency",
+str3_text:"Predictable budgets and clear structure.",
+
 services_title:"Services",
-serv1_title:"International transportation",serv1_text:"Sea and land cargo transport.",
-serv2_title:"Container logistics",serv2_text:"FCL coordination and port handling.",
-serv3_title:"Warehousing",serv3_text:"Storage and consolidation.",
+services_lead:"Full operational scope for international cargo movement.",
+
+serv1_title:"International transportation",
+serv1_text:"Sea and land transport routes.",
+serv2_title:"Container logistics",
+serv2_text:"FCL coordination and port handling.",
+serv3_title:"Warehousing",
+serv3_text:"Storage and consolidation.",
+
 contact_title:"Contact",
-contact_text:"We are open for cooperation.",
-office_title:"Office location",
-office_text:"Technopark Strogino, Moscow, Russia",
+contact_text:"We are open for cooperation with shippers and partners.",
+contact_email_title:"Email",
+contact_office_title:"Office location",
+contact_office_text:"Technopark Strogino\nTvardovskogo street, 8, Moscow",
+
 map_title:"Our location",
 map_sub:"Technopark Strogino, Moscow",
-footer_text:"© 2026 LOGICA LOGISTICS"
+
+footer_desc:"International logistics & supply chain coordination"
 },
-ru:{
+
+ru: {
 nav_about:"О компании",
+nav_strengths:"Преимущества",
 nav_services:"Услуги",
 nav_contact:"Контакты",
+
 hero_title:"LOGICA LOGISTICS",
 hero_sub:"Международный логистический партнёр.",
-stat1_title:"Международные",stat1_text:"Глобальные операции",
-stat2_title:"Контейнеры",stat2_text:"Море и суша",
-stat3_title:"Складирование",stat3_text:"Хранение",
-stat4_title:"Контроль",stat4_text:"Полный контроль",
+
+stat1_title:"Международные перевозки",
+stat1_text:"Глобальные операции",
+stat2_title:"Контейнеры",
+stat2_text:"Море и авто",
+stat3_title:"Складирование",
+stat3_text:"Хранение",
+stat4_title:"Контроль",
+stat4_text:"Полный цикл",
+
 about_title:"О компании",
-about_text:"LOGICA LOGISTICS строит управляемые цепочки поставок.",
+about_lead:"LOGICA LOGISTICS — международная логистическая компания.",
+
+strengths_title:"Почему мы",
+strengths_lead:"Мы строим управляемые логистические процессы.",
+
+str1_title:"Надёжность",
+str1_text:"Чёткие обязательства.",
+str2_title:"Опыт",
+str2_text:"Работа с портами и линиями.",
+str3_title:"Прозрачность",
+str3_text:"Понятная структура затрат.",
+
 services_title:"Услуги",
-serv1_title:"Международные перевозки",serv1_text:"Морские и наземные перевозки.",
-serv2_title:"Контейнерная логистика",serv2_text:"FCL и портовая обработка.",
-serv3_title:"Складская обработка",serv3_text:"Хранение и консолидация.",
+services_lead:"Полный цикл международной логистики.",
+
+serv1_title:"Международные перевозки",
+serv1_text:"Морские и наземные маршруты.",
+serv2_title:"Контейнерная логистика",
+serv2_text:"FCL и портовая обработка.",
+serv3_title:"Складирование",
+serv3_text:"Хранение и консолидация.",
+
 contact_title:"Контакты",
 contact_text:"Открыты для сотрудничества.",
-office_title:"Адрес офиса",
-office_text:"Технопарк Строгино, Москва, Россия",
+contact_email_title:"Электронная почта",
+contact_office_title:"Адрес офиса",
+contact_office_text:"Технопарк Строгино\nул. Твардовского, 8, Москва",
+
 map_title:"Наше расположение",
 map_sub:"Технопарк Строгино, Москва",
-footer_text:"© 2026 LOGICA LOGISTICS"
+
+footer_desc:"Международная логистика и координация"
 }
 };
 
-function setLang(lang){
+function applyLang(lang){
 document.querySelectorAll("[data-i18n]").forEach(el=>{
 const key=el.dataset.i18n;
-if(dict[lang][key]) el.textContent=dict[lang][key];
+if(dict[lang][key]){
+el.textContent=dict[lang][key];
+}
 });
-document.querySelectorAll(".lang button").forEach(b=>b.classList.remove("active"));
-document.querySelector(`[data-lang="${lang}"]`).classList.add("active");
 }
 
 document.querySelectorAll(".lang button").forEach(btn=>{
-btn.addEventListener("click",()=>setLang(btn.dataset.lang));
+btn.addEventListener("click",()=>{
+document.querySelectorAll(".lang button").forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+applyLang(btn.dataset.lang);
+});
 });
 
-setLang("en");
+applyLang("en");
 </script>
-
-</body>
-</html>
