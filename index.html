@@ -654,3 +654,119 @@ img {
 
   </div>
 </section>
+<!-- ===================== I18N SCRIPT ===================== -->
+<script>
+
+const dict = {
+  en: {
+    nav_about: "About",
+    nav_strengths: "Strengths",
+    nav_services: "Services",
+    nav_contact: "Contact",
+
+    hero_title: "LOGICA LOGISTICS",
+    hero_sub: "International logistics and supply chain partner providing structured, transparent and reliable solutions for global trade.",
+
+    stat1_title: "International",
+    stat1_text: "Global logistics operations",
+    stat2_title: "Containers",
+    stat2_text: "Sea & land transportation",
+    stat3_title: "Warehousing",
+    stat3_text: "Storage & consolidation",
+    stat4_title: "Control",
+    stat4_text: "End-to-end coordination",
+
+    about_title: "Who we are",
+    about_lead: "LOGICA LOGISTICS is an international logistics company focused on operational control, structural clarity and long-term partnerships.",
+    about_p1: "We operate as a coordination hub, integrating carriers, ports, warehouses and customs procedures into a single controlled system.",
+    about_p2: "Our approach is not transactional. We build predictable logistics structures where every stage is monitored and accountable.",
+    about_p3: "Instead of scaling volume blindly, we scale reliability, transparency and execution discipline.",
+    about_block_title: "Our operational focus",
+    about_li1: "Structured routing & timeline planning",
+    about_li2: "Full container flow supervision",
+    about_li3: "Cost predictability & budget clarity",
+    about_li4: "Risk control at every stage",
+
+    strengths_title: "Why work with us",
+    strengths_lead: "We do not sell promises. We build controlled logistics systems.",
+
+    services_title: "Services",
+    services_lead: "Full operational scope required to move cargo through international supply chains.",
+
+    contact_title: "Contact",
+    contact_text: "We are open for cooperation with shippers, traders and logistics partners.",
+    contact_email_title: "Email",
+    contact_office_title: "Office location",
+    contact_office_text: "Technopark Strogino\nTvardovskogo street, 8, building 1\nMoscow, 123458, Russia",
+
+    map_title: "Our location",
+    map_sub: "Technopark Strogino, Moscow"
+  },
+
+  ru: {
+    nav_about: "О компании",
+    nav_strengths: "Преимущества",
+    nav_services: "Услуги",
+    nav_contact: "Контакты",
+
+    hero_title: "LOGICA LOGISTICS",
+    hero_sub: "Международный логистический партнёр, обеспечивающий прозрачные и управляемые цепочки поставок.",
+
+    stat1_title: "Международные перевозки",
+    stat1_text: "Глобальные логистические операции",
+    stat2_title: "Контейнеры",
+    stat2_text: "Морские и наземные перевозки",
+    stat3_title: "Складирование",
+    stat3_text: "Хранение и консолидация",
+    stat4_title: "Контроль",
+    stat4_text: "Полный контроль цепочки поставок",
+
+    about_title: "О компании",
+    about_lead: "LOGICA LOGISTICS — международная логистическая компания, ориентированная на долгосрочное партнёрство и контроль цепочек поставок.",
+    about_p1: "Мы объединяем перевозчиков, порты и склады в единую управляемую систему.",
+    about_p2: "Мы строим предсказуемые логистические структуры с полным контролем каждого этапа.",
+    about_p3: "Мы масштабируем надёжность и прозрачность, а не просто объёмы.",
+    about_block_title: "Операционный фокус",
+    about_li1: "Структурированное планирование маршрутов",
+    about_li2: "Контроль контейнерного потока",
+    about_li3: "Прозрачность бюджета",
+    about_li4: "Контроль рисков",
+
+    strengths_title: "Почему работают с нами",
+    strengths_lead: "Мы строим контролируемые логистические системы.",
+
+    services_title: "Услуги",
+    services_lead: "Полный операционный цикл международной логистики.",
+
+    contact_title: "Контакты",
+    contact_text: "Открыты для сотрудничества с грузоотправителями и партнёрами.",
+    contact_email_title: "Электронная почта",
+    contact_office_title: "Адрес офиса",
+    contact_office_text: "Технопарк Строгино\nул. Твардовского, 8, стр. 1\nМосква, 123458, Россия",
+
+    map_title: "Наше расположение",
+    map_sub: "Технопарк Строгино, Москва"
+  }
+};
+
+document.querySelectorAll(".lang-switch button").forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    document.querySelectorAll(".lang-switch button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const lang = btn.dataset.lang;
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.dataset.i18n;
+      if (dict[lang][key]) {
+        el.innerHTML = dict[lang][key].replace(/\n/g, "<br>");
+      }
+    });
+  });
+});
+
+</script>
+
+</body>
+</html>
